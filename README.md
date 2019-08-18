@@ -1,5 +1,11 @@
+
+
+
 # Dexs-Modal
 Dexs, or Decks is a simple modal js library. Built completly with HTML DOM objects, and having no depenencies, Dexs is a super tiny modal libary. This libary was brought to you by <a href="https://PolarComputersInc.com">Polar Computers Inc.</a> and the Pace Software Team. This project wouldn't have be possible without the amazing insperation from <a href="https://micromodal.now.sh/">MicroModal</a>, <a href="https://github.hubspot.com/vex/">Vex Modal</a>, and <a href="https://getbootstrap.com/">Bootstrap Modal</a>. With the help of contrubitors and the Pace Team at Polar, we keep this libary uptodate.
+
+![Dexs Demo Image](https://raw.githubusercontent.com/PolarComputer/Dexs-Modal/master/demo-img.gif)
+
 
 <br>
 <br>
