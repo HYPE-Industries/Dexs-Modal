@@ -7,6 +7,7 @@ Dexs, or Decks is a simple modal js library. Built completly with HTML DOM objec
 
 ![Dexs Demo Image](https://raw.githubusercontent.com/PolarComputer/Dexs-Modal/master/demo-img.gif)
 
+[ Simple CodePen Demo ]( https://codepen.io/sellersew/pen/PoYzLqp )
 
 <br>
 <br>
@@ -25,7 +26,7 @@ Installing Dexs is super simple too. Just add the libary and your are ready to g
 <script src='dexs.js'></script>
 ```
 
-### CDN
+#### CDN
 You can either use a CDN or host the files directly. But if you want here is a link to our CDN, hosted on JSdelivr.<br>
 [ JSdelivr Repo ]( https://www.jsdelivr.com/package/gh/PolarComputer/Dexs-Modal )
 
