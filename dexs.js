@@ -1,4 +1,4 @@
-// Dexs Modal JS Library v1.0.0
+// Dexs Modal JS Library v1.0.1
 // github.com/PolarComputer/Dexs-Modal
 
 
