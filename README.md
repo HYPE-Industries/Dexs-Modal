@@ -60,7 +60,7 @@ dexs.open( "sample-modal" );
 <br>
 
 ### Simple Modal
-This is a basic modal, with not footer buttons and just text. It will auto scale to meet the size of the contents. Anything you put inside the `.modal-body` class will get the standard Dexs 
+This is a basic modal, with not footer buttons and just text. It will auto scale to meet the size of the contents. Anything you put inside the `.modal-body` class will get the standard Dexs
 ``` html
 <modal class="dexs">
   <div class="modal-body">
@@ -134,14 +134,14 @@ Normally if you open a new modal while an another modal is open it is added to a
 <br>
 
 ## Dexs Commands
-Here are some more commands you can use. 
+Here are some more commands you can use.
 
 
 
 | | Command | Description |
 | --- | --- | --- |
 | Open Modal | `dexs.open(id);` | Opens modal by id and adds existing open modals to stack. |
-| Close Modal | `dexs.close();` | Will close current open modal. Will return boolean, if modal is open and it is successfully close, return `true`. If no modal is open, to be closes, returns `false`. | 
+| Close Modal | `dexs.close();` | Will close current open modal. Will return boolean, if modal is open and it is successfully close, return `true`. If no modal is open, to be closes, returns `false`. |
 | Close All Modals | `dexs.closeAll();` | Will close all current open Modals, and clear the stack. Meaning no modal will open that was in the stack. |
 | Is Open | `decs.isOpen(id);` | Returns boolean if the specific modal, based on id which is passed to the function, is currently open. if the the current modal is open returns `true`, if the modal that is specified is not open returns `false`. |
 | Get Stack | `dexs.stack();` | Returns an array of objects, with the ID's and level number of all modals in the stack.<br> Ex. `[{ id: 'sampleModal-1', level: 2 }, { id: 'sampleModal-2', level: 1 }]`|
