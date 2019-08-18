@@ -100,5 +100,9 @@ Normally if you open a new modal while an another modal is open it is added to a
 
 | | Command | Description |
 | --- | --- | --- |
-| Open Modal | `dexs.open( #id );` | Opens modal by id and adds existing open modals to stack. |
-| Close Modal | `dexs.close();` | Will close current open modal. | 
+| Open Modal | `dexs.open(id);` | Opens modal by id and adds existing open modals to stack. |
+| Close Modal | `dexs.close();` | Will close current open modal. Will return boolean, if modal is open and it is successfully close, return `true`. If no modal is open, to be closes, returns `false`. | 
+| Close All Modals | `dexs.closeAll();` | Will close all current open Modals, and clear the stack. Meaning no modal will open that was in the stack. |
+| Is Open | `decs.isOpen(id);` | Returns boolean if the specific modal, based on id which is passed to the function, is currently open. if the the current modal is open returns `true`, if the modal that is specified is not open returns `false`. |
+| Get Stack | `dexs.stack();` | Returns an array of objects, with the ID's and level number of all modals in the stack.<br> Ex. `[{ id: 'sampleModal-1', level: 2 }, { id: 'sampleModal-2', level: 1 }]`|
+| Clear Stack | `dexs.clearStack();` | Doesn't close the current modal, but will make remove all other modal from stack. Making it so when you close the current modal, you exscape all the proceeding modals in the stack. |
