@@ -1,0 +1,78 @@
+/* Dexs Modal JS Library v1.0.0 */
+/* github.com/PolarComputer/Dexs-Modal */
+
+/* Dexs Shade */
+.dexs-shade {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+  pointer-events: none;
+}
+
+.dexs-shade.show {
+  opacity: 0.5;
+  pointer-events: auto;
+}
+
+.dexs-shade.fade {
+  transition: opacity .15s linear;
+  transition-delay: 0.3s;
+}
+
+.dexs-shade.fade.show {
+  transition-delay: 0s;
+}
+
+
+
+/* Modal */
+modal.dexs {
+  position: absolute;
+  z-index: 1050;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%); /* for fade down animation */
+  -webkit-transform: translate(-50%, -75%); /* for fade down animation */
+  max-width: 80%;
+  max-height: 80vh;
+  width: fit-content;
+  background: white;
+  border-radius: 10px;
+  overflow-y: auto;
+  pointer-events: none;
+  transition: transform .3s ease-out,-webkit-transform .3s ease-out, opacity 0.2s linear 0.1s;
+  opacity: 0;
+}
+
+modal.dexs.open {
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  opacity: 1;
+  pointer-events: auto;
+  transition-delay: 0.2s;
+}
+
+modal.dexs.dexs--small {
+  width: 500px;
+}
+
+modal.dexs .modal-body {
+  padding: 20px;
+}
+
+modal.dexs .modal-footer {
+  background: white;
+  border-top: solid 1px #EEEEEE;
+  padding: 10px;
+  text-align: right
+}
+
+modal.dexs .modal-footer.sticky-footer {
+  position: sticky;
+  bottom: 0px;
+}
