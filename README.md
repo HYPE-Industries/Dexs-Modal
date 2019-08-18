@@ -27,6 +27,26 @@ Here are some examples. Most of these are pretty simple and while Dexs doesn't d
 
 <br>
 
+### Opening modal
+It's super easy to open a Dexs, modal. Just use the JS command `dexs.open( id );`. You can read more about other JS commands, like closing modals, below.
+
+<b>HTML</b>
+``` html
+<modal class="dexs" id="sample-modal">
+  <div class="modal-body">
+    <h1>Titile</h1>
+  </div>
+</modal>
+```
+
+<b>Javascript</b>
+``` javascript
+dexs.open( "sample-modal" );
+
+```
+
+<br>
+
 ### Simple Modal
 This is a basic modal, with not footer buttons and just text. It will auto scale to meet the size of the contents. Anything you put inside the `.modal-body` class will get the standard Dexs 
 ``` html
@@ -98,6 +118,14 @@ Normally if you open a new modal while an another modal is open it is added to a
 </modal>
 ```
 
+<br>
+<br>
+
+## Dexs Commands
+Here are some more commands you can use. 
+
+
+
 | | Command | Description |
 | --- | --- | --- |
 | Open Modal | `dexs.open(id);` | Opens modal by id and adds existing open modals to stack. |
@@ -106,3 +134,4 @@ Normally if you open a new modal while an another modal is open it is added to a
 | Is Open | `decs.isOpen(id);` | Returns boolean if the specific modal, based on id which is passed to the function, is currently open. if the the current modal is open returns `true`, if the modal that is specified is not open returns `false`. |
 | Get Stack | `dexs.stack();` | Returns an array of objects, with the ID's and level number of all modals in the stack.<br> Ex. `[{ id: 'sampleModal-1', level: 2 }, { id: 'sampleModal-2', level: 1 }]`|
 | Clear Stack | `dexs.clearStack();` | Doesn't close the current modal, but will make remove all other modal from stack. Making it so when you close the current modal, you exscape all the proceeding modals in the stack. |
+| Remove from Stack | `dexs.removeFromStack(id);` | Removes element direcly from stack. This will NOT close any open elements. But remove elements that had been opened, and would of opened up when the proceding modals were closed. |
