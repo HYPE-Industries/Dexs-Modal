@@ -1,6 +1,7 @@
-// Dexs Modal JS Library v1.0.1
+// Dexs Modal JS Library v1.0.2
 // github.com/PolarComputer/Dexs-Modal
 
+// this file has been updeated for ES5
 
 // Add Shade When Done Loading
 document.addEventListener("DOMContentLoaded", function(){
@@ -100,11 +101,18 @@ dexs.closeAll = function() {
   shade.hide(); // Close Shade
   this.clearStack(); // Clear Stack
 
+
   // Close all possible modals
   var openModals = document.querySelectorAll( "modal.dexs.open" );
+
+
   for ( var i = 0; i < openModals.length; i++ ) {
     openModals[i].classList.remove( "open" );
+    if ( openModals[i].hasAttribute( "destroy-on-close" ) ) {
+      openModals.parentNode.removeChild( openModals );
+    }
   }
+
 }
 
 
@@ -112,7 +120,10 @@ dexs.closeAll = function() {
 /*=============== Close ================
   Close only the current modal, and
   remove it from the stack, and open the
-  next modal in the stack.
+  next modal in the stack. If the
+  element has the attribute "destroy-on-close",
+  it will be removed from the HTML, upon
+  closing the modal.
 
   @return - false if failed to close
   ======================================*/
@@ -127,6 +138,12 @@ dexs.close = function() {
   openModals = openModals[0]; // select the only element
   this.removeFromStack( openModals.id ); // remove this element from stack => shouldn't be there - precation
   openModals.classList.remove( "open" ); // close the modaul
+
+  setTimeout(function(){
+    if ( openModals.hasAttribute( "destroy-on-close" ) ) {
+      openModals.parentNode.removeChild( openModals );
+    }
+  }, 200);
 
   // Hide shade if required
   var stack = this.stack();
@@ -207,3 +224,5 @@ dexs.clearStack = function() {
 dexs.removeFromStack = function( _id ) {
   document.getElementById( _id ).removeAttribute( "data-stack-level" );
 }
+
+export { dexs };

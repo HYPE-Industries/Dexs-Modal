@@ -1,4 +1,4 @@
-/* Dexs Modal JS Library v1.0.1 */
+/* Dexs Modal JS Library v1.0.2 */
 /* github.com/PolarComputer/Dexs-Modal */
 
 /* Dexs Shade */
@@ -32,7 +32,7 @@
 
 /* Modal */
 modal.dexs {
-  position: absolute;
+  position: fixed;
   z-index: 1050;
   top: 50%;
   left: 50%;
@@ -43,10 +43,14 @@ modal.dexs {
   width: fit-content;
   background: white;
   border-radius: 10px;
-  overflow-y: auto;
+  overflow-y: unset;
   pointer-events: none;
   transition: transform .3s ease-out,-webkit-transform .3s ease-out, opacity 0.2s linear 0.1s;
   opacity: 0;
+}
+
+modal.dexs.scrollable {
+  overflow-y: auto;
 }
 
 modal.dexs.open {
@@ -66,6 +70,7 @@ modal.dexs .modal-body {
 }
 
 modal.dexs .modal-footer {
+  border-radius: 0px 0px 10px 10px;
   background: white;
   border-top: solid 1px #EEEEEE;
   padding: 10px;

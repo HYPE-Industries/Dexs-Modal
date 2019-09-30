@@ -120,13 +120,39 @@ Some times you have content that will take up more than the standard amount of s
 
 <br>
 
+### Modal with Overflow
+Some times you have alot of content inside a modal and you need it to scroll. If that is the case add the class "scrollable", to the main modal class.
+
+``` html
+ <modal class="dexs scrollable">
+  <div class="modal-body">
+    <h1>Titile</h1>
+  </div>
+</modal>
+```
+
+<br>
+
 ### Disable Adding to stack
 Normally if you open a new modal while an another modal is open it is added to a deck. This will record the order that modals are opened, so when you close one it will go to the last one open. To disable a modal being added to the history stack add the attribute `disable-stack` to the element.
 
 ``` html
 <modal class="dexs dexs--small" disable-deck>
   <div class="modal-body">
-    <h1>Titile</h1>
+    <h1>Title</h1>
+  </div>
+</modal>
+```
+
+<br>
+
+### Destroy On Close
+This will destroy the HTML modal, when it is closed. This is useful if you are generating custom popups in JavaScript and the content is rendered every time. Simply add the attribute, "destroy-on-close". When this is closed, you won't be able to open it again, it is destroyed.
+
+``` html
+<modal class="dexs dexs--small" destroy-on-close>
+  <div class="modal-body">
+    <h1>Title</h1>
   </div>
 </modal>
 ```
